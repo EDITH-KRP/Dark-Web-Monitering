@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Web Monitoring Crawler</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dark Web Monitoring Crawler</h1>
+            <img src="assets/logo.png" alt="Logo" class="logo">
+            <button id="dark-mode-toggle">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="crawl">
+            <h2>Crawl the Dark Web</h2>
+            <form id="crawl-form">
+                <input type="text" id="keywords" placeholder="Enter keywords (e.g., arms, drugs)" required>
+                <input type="text" id="geo-location" placeholder="Enter Geo-location (e.g., USA)" required>
+                <button type="submit">Start Crawling</button>
+            </form>
+            <div id="crawl-results"></div>
+        </section>
+
+        
+        <section id="ip-details">
+            <h2>Reveal IP Details</h2>
+            <form id="ip-form">
+                <input type="text" id="dark-web-url" place

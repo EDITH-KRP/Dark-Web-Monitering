@@ -1,0 +1,6 @@
+Flask==2.1.2
+requests==2.26.0
+beautifulsoup4==4.11.1
+lxml==4.6.3
+stem==1.8.0 
+geoip2==4.3.0 
