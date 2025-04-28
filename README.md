@@ -1,7 +1,3 @@
-Sure! Here’s a comprehensive README file for your project:
-
----
-
 # Dark Web Monitoring Tool
 
 This project is a comprehensive Dark Web monitoring solution designed to crawl .onion websites, attempt IP and geolocation reveals, filter dark web sites based on keywords and risk scores, and track seller profiles. The tool includes both backend (Python) and frontend (HTML5, CSS3, JavaScript) components.
@@ -181,10 +177,5 @@ pip install -r requirements.txt
 - **Frontend:**
   - No additional dependencies are required for the frontend since it's built using plain HTML5, CSS3, and JavaScript.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 This README should cover everything needed to set up and use the project. Feel free to update any specific information related to your own project needs. Let me know if you'd like any modifications!
