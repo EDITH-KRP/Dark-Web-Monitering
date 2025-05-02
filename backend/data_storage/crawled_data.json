@@ -1,1 +1,57 @@
-[]
+[
+  {
+    "id": "1bb4a4b1-5d44-4a00-b559-9ab48322aefc",
+    "url": "http:///search/redirect?search_term=guns&redirect_url=http://rambleeeo4vhxgorpmgunoo276nkiw7bos74cg7tjlgnb3puj3d7ghad.onion/tag/guns",
+    "title": "Error scraping http:///search/redirect?search_term=guns&redirect_url=http://rambleeeo4vhxgorpmgunoo276nkiw7bos74cg7tjlgnb3puj3d7ghad.onion/tag/guns",
+    "description": "Error: Invalid URL 'http:///search/redirect?search_term=guns&redirect_url=http://rambleeeo4vhxgorpmgunoo276nkiw7bos74cg7tjlgnb3puj3d7ghad.onion/tag/guns': No host supplied",
+    "risk_score": 85,
+    "country": "Unknown",
+    "is_seller": true,
+    "archive_link": "https://web.archive.org/web/20160911185837/http:///search/redirect?search_term=guns&redirect_url=http://rambleeeo4vhxgorpmgunoo276nkiw7bos74cg7tjlgnb3puj3d7ghad.onion/tag/guns",
+    "date_detected": "2025-04-29"
+  },
+  {
+    "id": "7f97caa1-f88d-44ac-8210-ed7825eea47e",
+    "url": "http:///search/redirect?search_term=guns&redirect_url=http://x4fcceh6bfwxr4b54i6tgufhmut43jqqi4oeapg3oubjlrkzzm5bw5qd.onion/product-tag/guns/",
+    "title": "Error scraping http:///search/redirect?search_term=guns&redirect_url=http://x4fcceh6bfwxr4b54i6tgufhmut43jqqi4oeapg3oubjlrkzzm5bw5qd.onion/product-tag/guns/",
+    "description": "Error: Invalid URL 'http:///search/redirect?search_term=guns&redirect_url=http://x4fcceh6bfwxr4b54i6tgufhmut43jqqi4oeapg3oubjlrkzzm5bw5qd.onion/product-tag/guns/': No host supplied",
+    "risk_score": 61,
+    "country": "Unknown",
+    "is_seller": true,
+    "archive_link": "https://web.archive.org/web/20220801005500/http:///search/redirect?search_term=guns&redirect_url=http://x4fcceh6bfwxr4b54i6tgufhmut43jqqi4oeapg3oubjlrkzzm5bw5qd.onion/product-tag/guns/",
+    "date_detected": "2025-04-29"
+  },
+  {
+    "id": "25c3534f-1e19-498f-bb4a-28430b912038",
+    "url": "http:///search/redirect?search_term=guns&redirect_url=http://x4fcceh6v3csnoxpyvfr4fbr3qcforr245bgk6qd5imc5sdrjfufz2ad.onion/product-tag/guns/",
+    "title": "Error scraping http:///search/redirect?search_term=guns&redirect_url=http://x4fcceh6v3csnoxpyvfr4fbr3qcforr245bgk6qd5imc5sdrjfufz2ad.onion/product-tag/guns/",
+    "description": "Error: Invalid URL 'http:///search/redirect?search_term=guns&redirect_url=http://x4fcceh6v3csnoxpyvfr4fbr3qcforr245bgk6qd5imc5sdrjfufz2ad.onion/product-tag/guns/': No host supplied",
+    "risk_score": 61,
+    "country": "Unknown",
+    "is_seller": true,
+    "archive_link": "https://web.archive.org/web/20161121013147/http:///search/redirect?search_term=guns&redirect_url=http://x4fcceh6v3csnoxpyvfr4fbr3qcforr245bgk6qd5imc5sdrjfufz2ad.onion/product-tag/guns/",
+    "date_detected": "2025-04-29"
+  },
+  {
+    "id": "4e6a12dd-c0e0-4b62-9234-a84981d98ae8",
+    "url": "http:///search/redirect?search_term=guns&redirect_url=http://bmguns777mxlfnozjsfaeiyawspscqljaa4r7aohfmfydaqwbughptyd.onion/product-category/guns/page/4/",
+    "title": "Error scraping http:///search/redirect?search_term=guns&redirect_url=http://bmguns777mxlfnozjsfaeiyawspscqljaa4r7aohfmfydaqwbughptyd.onion/product-category/guns/page/4/",
+    "description": "Error: Invalid URL 'http:///search/redirect?search_term=guns&redirect_url=http://bmguns777mxlfnozjsfaeiyawspscqljaa4r7aohfmfydaqwbughptyd.onion/product-category/guns/page/4/': No host supplied",
+    "risk_score": 87,
+    "country": "Unknown",
+    "is_seller": true,
+    "archive_link": "https://web.archive.org/web/20210822192351/http:///search/redirect?search_term=guns&redirect_url=http://bmguns777mxlfnozjsfaeiyawspscqljaa4r7aohfmfydaqwbughptyd.onion/product-category/guns/page/4/",
+    "date_detected": "2025-04-29"
+  },
+  {
+    "id": "bda6b78b-53d2-4f14-b1c1-be8c947cf86f",
+    "url": "http:///search/redirect?search_term=guns&redirect_url=http://bmguns7xkncaxzs5vtmxpiilruvwzwvrbjzj6aclb5oipvlc4fe6gsqd.onion/product-category/guns/page/14/",
+    "title": "Error scraping http:///search/redirect?search_term=guns&redirect_url=http://bmguns7xkncaxzs5vtmxpiilruvwzwvrbjzj6aclb5oipvlc4fe6gsqd.onion/product-category/guns/page/14/",
+    "description": "Error: Invalid URL 'http:///search/redirect?search_term=guns&redirect_url=http://bmguns7xkncaxzs5vtmxpiilruvwzwvrbjzj6aclb5oipvlc4fe6gsqd.onion/product-category/guns/page/14/': No host supplied",
+    "risk_score": 84,
+    "country": "Unknown",
+    "is_seller": true,
+    "archive_link": "https://web.archive.org/web/20160221060257/http:///search/redirect?search_term=guns&redirect_url=http://bmguns7xkncaxzs5vtmxpiilruvwzwvrbjzj6aclb5oipvlc4fe6gsqd.onion/product-category/guns/page/14/",
+    "date_detected": "2025-04-29"
+  }
+]

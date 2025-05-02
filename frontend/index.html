@@ -5,30 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark Web Monitoring Crawler</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/flag-icons/css/flag-icons.min.css">
 </head>
 <body>
+    <div class="matrix-background"></div>
+    
     <header>
         <div class="container">
-            <h1>Dark Web Monitoring Crawler</h1>
-            <img src="assets/logo.png" alt="Logo" class="logo">
-            <button id="dark-mode-toggle">🌙</button>
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Logo" class="logo animate-float">
+                <h1>Dark Web <span class="highlight">Monitoring</span> Crawler</h1>
+            </div>
+            <div class="header-controls">
+                <div id="vpn-status" class="vpn-status">
+                    <span class="vpn-indicator"></span>
+                    <span class="vpn-text">VPN Status: Checking...</span>
+                </div>
+                <div id="alert-badge" class="alert-badge hidden">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>High Risk Activity</span>
+                </div>
+                <button id="dark-mode-toggle" aria-label="Toggle terminal theme"></button>
+            </div>
         </div>
+        <div class="header-decoration">
+            <div class="cyber-line"></div>
+        </div>
+        <div class="cyber-grid"></div>
     </header>
 
     <main>
-        
-        <section id="crawl">
-            <h2>Crawl the Dark Web</h2>
-            <form id="crawl-form">
-                <input type="text" id="keywords" placeholder="Enter keywords (e.g., arms, drugs)" required>
-                <input type="text" id="geo-location" placeholder="Enter Geo-location (e.g., USA)" required>
-                <button type="submit">Start Crawling</button>
-            </form>
-            <div id="crawl-results"></div>
-        </section>
-
-        
-        <section id="ip-details">
-            <h2>Reveal IP Details</h2>
-            <form id="ip-form">
-                <input type="text" id="dark-web-url" place
+        <div class="dashboard-grid">
+            <section id="crawl" class="dashboard-card">
+                <h2>Crawl the Dark Web</h2>
+                <!-- Browser selector will be inserted here by browser-selector.js -->
+                <form id="crawl-form">
+                    <input type="text" id="keywords" placeholder="Enter keywords (e.g., arms, drugs)" required>
+                    <input type="text" id="geo-location" placeholder="Enter Geo-location (e.g., USA)" required>
+                    <div class="button-group">
+                        <button type="submit" class="primary-button" id="start-crawl-button">
+                            <i class="fas fa-search"></i> Start Crawling
+                        </button>
+                        <button type="button" id="load-mock-data" class="secondary-button">
+                            <i class="fas fa-vial"></i> Load Test Data
+                        </button>
+                    </div>
+                </form>
+                <div class="export-controls">
+                    <button id="export-csv" class="secondary-button">
+                        <i class="fas fa-file-csv"></i> Export CSV
+                    </button>
+                    <button id="export-excel" class="secondary-button">
+                        <i class="fas fa-file-excel"></i> Export Excel
+                    </button>
+                    <button id="upload-filebase" class="secondary-button">
+                        <i class="fas fa-cloud-upload-alt"></i> Upload to Filebase
+                    </button>
+                </div>
+                <div id="crawl-results" class="results-container"></div>
+            </section>
+            
+            <section id="ip-details" class="dashboard-card">
+                <h2>Reveal IP Details</h2>
+                <form id="ip-form">
+                    <input type="text" id="dark-web-url" placeholder="Enter Dark Web URL (.onion)" required>
+                    <button type="submit" class="primary-button">
+                        <i class="fas fa-network-wired"></i> Reveal IP
+                    </button>
+                </form>
+                <div id="ip-results" class="results-container"></div>
+            </section>
+            
+            <section id="web-archive" class="dashboard-card">
+                <h2>Web Archive Lookup</h2>
+                <form id="archive-form">
+                    <input type="text" id="archive-url" placeholder="Enter URL to check archives" required>
+                    <button type="submit" class="primary-button">
+                        <i class="fas fa-history"></i> Check Archives
+                    </button>
+                </form>
+                <div id="archive-results" class="results-container"></div>
+            </section>
+            
+            <section id="timeline-view" class="dashboard-card">
+                <h2>Timeline View</h2>
+                <div class="filter-controls">
+                    <label for="date-filter">Filter by date detected:</label>
+                    <input type="range" id="date-filter" min="0" max="30" value="30">
+                    <span id="date-filter-value">Last 30 days</span>
+                </div>
+                <div id="timeline-results" class="results-container"></div>
+            </section>
+        </div>
+    </main>
+    
+    <div id="toast-container" class="toast-container"></div>
+    
+    <footer>
+        <div class="footer-decoration">
+            <div class="cyber-line"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Logo" class="footer-logo-img">
+                    <p>Dark Web Monitoring Tool</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#crawl">Crawler</a></li>
+                            <li><a href="#ip-details">IP Details</a></li>
+                            <li><a href="#web-archive">Web Archive</a></li>
+                            <li><a href="#timeline-view">Timeline</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Dark Web Monitoring Tool. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="landing-animation.js"></script>
+    <script src="dark-mode-toggle.js"></script>
+    <script src="matrix-effects.js"></script>
+    <script src="browser-selector.js"></script>
+    <script src="script.js"></script>
+    <script src="ip-details.js"></script>
+    <script src="filter.js"></script>
+    <script src="timeline.js"></script>
+    <script src="export.js"></script>
+    <script src="vpn-status.js"></script>
+    <script src="web-archive.js"></script>
+    <script src="filebase.js"></script>

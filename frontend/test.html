@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Web Monitoring Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 10px 0;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d99;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dark Web Monitoring API Test</h1>
+    
+    <div>
+        <h2>VPN Status</h2>
+        <button id="check-vpn">Check VPN Status</button>
+        <pre id="vpn-result">Results will appear here...</pre>
+    </div>
+    
+    <div>
+        <h2>Crawl Dark Web</h2>
+        <input type="text" id="keywords" placeholder="Enter keywords (e.g., arms, drugs)" value="drugs, forum">
+        <input type="text" id="geo-location" placeholder="Enter Geo-location (e.g., USA)" value="Russia">
+        <button id="start-crawl">Start Crawl</button>
+        <pre id="crawl-result">Results will appear here...</pre>
+    </div>
+    
+    <div>
+        <h2>IP Details</h2>
+        <input type="text" id="ip-url" placeholder="Enter Dark Web URL" value="http://example.onion">
+        <button id="check-ip">Check IP</button>
+        <pre id="ip-result">Results will appear here...</pre>
+    </div>
+    
+    <div>
+        <h2>Web Archive</h2>
+        <input type="text" id="archive-url" placeholder="Enter URL" value="http://example.onion">
+        <button id="check-archive">Check Archive</button>
+        <pre id="archive-result">Results will appear here...</pre>
+    </div>
+    
+    <script>
+        const API_URL = 'http://localhost:5000';
+        
+        // Helper function to format JSON
+        function formatJSON(json) {
+            return JSON.stringify(json, null, 2);
+        }
+        
+        // Check VPN Status
+        document.getElementById('check-vpn').addEventListener('click', async () => {
+            const resultElement = document.getElementById('vpn-result');
+            resultElement.textContent = 'Loading...';
+            
+            try {
+                const response = await fetch(`${API_URL}/vpn-status`);
+                const data = await response.json();
+                resultElement.textContent = formatJSON(data);
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+            }
+        });
+        
+        // Start Crawl
+        document.getElementById('start-crawl').addEventListener('click', async () => {
+            const resultElement = document.getElementById('crawl-result');
+            resultElement.textContent = 'Loading...';
+            
+            const keywords = document.getElementById('keywords').value;
+            const geoLocation = document.getElementById('geo-location').value;
+            
+            try {
+                const response = await fetch(`${API_URL}/crawl`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        keywords: keywords,
+                        geo_location: geoLocation
+                    }),
+                });
+                const data = await response.json();
+                resultElement.textContent = formatJSON(data);
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+            }
+        });
+        
+        // Check IP
+        document.getElementById('check-ip').addEventListener('click', async () => {
+            const resultElement = document.getElementById('ip-result');
+            resultElement.textContent = 'Loading...';
+            
+            const url = document.getElementById('ip-url').value;
+            
+            try {
+                const response = await fetch(`${API_URL}/ip-details`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        url: url
+                    }),
+                });
+                const data = await response.json();
+                resultElement.textContent = formatJSON(data);
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+            }
+        });
+        
+        // Check Archive
+        document.getElementById('check-archive').addEventListener('click', async () => {
+            const resultElement = document.getElementById('archive-result');
+            resultElement.textContent = 'Loading...';
+            
+            const url = document.getElementById('archive-url').value;
+            
+            try {
+                const response = await fetch(`${API_URL}/web-archive`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        url: url
+                    }),
+                });
+                const data = await response.json();
+                resultElement.textContent = formatJSON(data);
+            } catch (error) {
+                resultElement.textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

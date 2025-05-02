@@ -1,0 +1,41 @@
+Requirement already satisfied: Flask==2.1.2 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (2.1.2)
+Collecting requests==2.26.0
+  Using cached requests-2.26.0-py2.py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: flask-cors in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (4.0.0)
+Requirement already satisfied: pandas in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (2.2.3)
+Requirement already satisfied: openpyxl in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (3.1.5)
+Requirement already satisfied: Werkzeug>=2.0 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from Flask==2.1.2) (2.0.3)
+Requirement already satisfied: Jinja2>=3.0 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from Flask==2.1.2) (3.1.6)
+Requirement already satisfied: itsdangerous>=2.0 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from Flask==2.1.2) (2.2.0)
+Requirement already satisfied: click>=8.0 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from Flask==2.1.2) (8.1.8)
+Collecting urllib3<1.27,>=1.21.1 (from requests==2.26.0)
+  Downloading urllib3-1.26.20-py2.py3-none-any.whl.metadata (50 kB)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from requests==2.26.0) (2025.1.31)
+Collecting charset-normalizer~=2.0.0 (from requests==2.26.0)
+  Downloading charset_normalizer-2.0.12-py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from requests==2.26.0) (3.10)
+Requirement already satisfied: numpy>=1.26.0 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.2.4)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2025.2)
+Requirement already satisfied: et-xmlfile in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from openpyxl) (2.0.0)
+Requirement already satisfied: colorama in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from click>=8.0->Flask==2.1.2) (0.4.6)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from Jinja2>=3.0->Flask==2.1.2) (3.0.2)
+Requirement already satisfied: six>=1.5 in c:\users\prajw\appdata\local\programs\python\python313\lib\site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+Downloading requests-2.26.0-py2.py3-none-any.whl (62 kB)
+Downloading charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Downloading urllib3-1.26.20-py2.py3-none-any.whl (144 kB)
+Installing collected packages: urllib3, charset-normalizer, requests
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 2.3.0
+    Uninstalling urllib3-2.3.0:
+      Successfully uninstalled urllib3-2.3.0
+  Attempting uninstall: charset-normalizer
+    Found existing installation: charset-normalizer 3.4.1
+    Uninstalling charset-normalizer-3.4.1:
+      Successfully uninstalled charset-normalizer-3.4.1
+  Attempting uninstall: requests
+    Found existing installation: requests 2.31.0
+    Uninstalling requests-2.31.0:
+      Successfully uninstalled requests-2.31.0
+Successfully installed charset-normalizer-2.0.12 requests-2.26.0 urllib3-1.26.20
